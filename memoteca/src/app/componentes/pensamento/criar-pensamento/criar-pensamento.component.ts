@@ -1,3 +1,4 @@
+import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class CriarPensamentoComponent {
   // vamos criar um atributo que se chama pensamento
   // ele vai ser um objeto de propriedades
-  pensamento = {
-    id: '1',
+  pensamento: Pensamento = {
+    id: 1,
     conteudo: 'Aprendendo angular',
     autoria: 'Dev',
     modelo: ''

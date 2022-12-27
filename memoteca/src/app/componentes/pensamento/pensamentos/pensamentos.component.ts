@@ -1,3 +1,4 @@
+import { Pensamento } from './../pensamento';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -6,12 +7,19 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pensamentos.component.css']
 })
 export class PensamentosComponent {
-  @Input () pensamento = {
+  // vamos dizer o tipo
+  @Input () pensamento: Pensamento = {
+    id: 0,
     conteudo: 'I love Angular',
     autoria: 'Nay',
     modelo: 'modelo3'
   }
 
-  constructor() { }
+  larguraPensamento(): string {
+    if(this.pensamento.conteudo.length >= 256){
+      return 'pensamento-g'
+    }
+    return 'pensamento-p'
+  }
 
 }

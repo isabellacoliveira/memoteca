@@ -1,3 +1,4 @@
+import { Pensamento } from './../pensamento';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,18 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./listar-pensamento.component.css']
 })
 export class ListarPensamentoComponent {
-  listaPensamento = [
-    {
-      conteudo: 'Passo informações para o componente filho',
-      autoria: 'Componente pai',
-      modelo: 'modelo3'
-    },
-    {
-      conteudo: 'Minha propriedade é decorada com @Input()',
-      autoria: 'Isa',
-      modelo: 'modelo3'
-    }
-  ]
+  listaPensamento: Pensamento[] = []
+  // essa lista receberá dados do back-end
   constructor () { }
   ngOninit(): void {
 

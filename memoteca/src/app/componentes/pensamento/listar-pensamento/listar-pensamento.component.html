@@ -1,17 +1,24 @@
 <section class="container">
   <header class="header d-flex">
     <h2 class="ff-inter">Meu Mural</h2>
-    <!-- esse elemento agora é um router link  -->
     <button
         routerLink="/criarPensamento"
         class="botao"
       >Adicionar pensamento</button>
   </header>
-  <div class="mural">
-    <!-- temos uma diretiva estrutural do angular que consegue modificar o html  -->
-    <!-- esse ng recebe uma expressao  -->
+  <!-- se houver algum pensamento cadastrado , renderizar a div  -->
+  <!-- se não , nao renderizar  -->
+  <div class="mural" *ngIf="listaPensamento.length > 0, else semPensamentos">
     <div *ngFor="let pensamento of listaPensamento">
-
+      <app-pensamentos [pensamento]="pensamento"></app-pensamentos>
     </div>
   </div>
 </section>
+<!-- esse elemento não é renderizado por padrão  -->
+<!-- precisamos instruir o angular para que esse conteudo apareça  -->
+<!-- a # é o nome do ngTemplate  -->
+<ng-template #semPensamentos>
+  <div class="ff-inter sem-pensamentos">
+    <p>Ainda não há pensamentos cadastrados</p>
+  </div>
+</ng-template>
