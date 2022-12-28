@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './excluir-pensamento.component.html',
   styleUrls: ['./excluir-pensamento.component.css']
 })
-export class ExcluirPensamentoComponent {
+export class ExcluirPensamentoComponent implements OnInit {
   pensamento: Pensamento = {
     id: 0,
     conteudo: '',

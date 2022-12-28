@@ -1,3 +1,4 @@
+import { EditarPensamentoComponent } from './componentes/pensamento/editar-pensamento/editar-pensamento.component';
 import { ExcluirPensamentoComponent } from './componentes/pensamento/excluir-pensamento/excluir-pensamento.component';
 import { ListarPensamentoComponent } from './componentes/pensamento/listar-pensamento/listar-pensamento.component';
 import { CriarPensamentoComponent } from './componentes/pensamento/criar-pensamento/criar-pensamento.component';
@@ -19,8 +20,12 @@ const routes: Routes = [
     component: ListarPensamentoComponent
   },
   {
-    path: '/pensamentos/excluirPensamento/:id',
+    path: 'pensamentos/excluirPensamento/:id',
     component: ExcluirPensamentoComponent
+  },
+  {
+    path: 'pensamentos/editarPensamento/:id',
+    component: EditarPensamentoComponent
   }
 ];
 

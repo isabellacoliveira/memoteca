@@ -21,3 +21,4 @@ describe('RodapeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

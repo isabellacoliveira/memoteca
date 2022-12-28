@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './listar-pensamento.component.html',
   styleUrls: ['./listar-pensamento.component.css']
 })
-export class ListarPensamentoComponent {
+export class ListarPensamentoComponent implements OnInit {
   listaPensamento: Pensamento[] = []
   constructor (private service: PensamentoService) { }
 
